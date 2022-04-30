@@ -1,0 +1,28 @@
+{
+    "$schema": "./zowe.schema.json",
+    "profiles": {
+        "ibmzosmf": {
+            "type": "zosmf",
+            "properties": {
+                "basePath": "/ibmzosmf/api/v1"
+            }
+        },
+        "base": {
+            "type": "base",
+            "properties": {
+                "host": "lpar1.broadcom.net",
+                "port": 7554,
+                "rejectUnauthorized": false,
+                "tokenType": "apimlAuthenticationToken"
+            },
+            "secure": [
+                "tokenValue"
+            ]
+        }
+    },
+    "defaults": {
+        "zosmf": "ibmzosmf",
+        "base": "base"
+    },
+    "autoStore": true
+}
